@@ -56,7 +56,6 @@ decorator==4.0.11
 defusedxml==0.7.1
 distlib==0.3.3
 docker==5.0.2
-docopt @ file:///D:/tabpy/TabPy/docopt-0.6.2.tar.gz
 docutils==0.15.2
 download==0.3.5
 emoji==1.6.1
