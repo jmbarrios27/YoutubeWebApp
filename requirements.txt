@@ -3,7 +3,7 @@ numpy
 pandas
 selenium
 webdriver_manager
-BeautifulSoup
+Bs4
 warnings
 string
 sentiment_analysis_spanish
