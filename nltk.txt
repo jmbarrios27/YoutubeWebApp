@@ -1,4 +1,4 @@
-nltk
+tokenize
 data
 retract_bindings
 stopwords
