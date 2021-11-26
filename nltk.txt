@@ -3,3 +3,4 @@ data
 retract_bindings
 stopwords
 punkt
+nltk
