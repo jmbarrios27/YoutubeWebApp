@@ -15,7 +15,6 @@ matplotlib
 seaborn
 plotly
 streamlit
-urllib
 requests
 streamlit_player
 urllib3
