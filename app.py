@@ -24,7 +24,6 @@ from textblob import TextBlob
 import gensim
 import itertools,collections
 import nltk
-nltk.download()
 import base64
 import xlsxwriter
 from sklearn.feature_extraction.text import TfidfVectorizer,  CountVectorizer
