@@ -360,9 +360,9 @@ if control == True:
 
     st.markdown("<h4 style='text-align: center; color: green;'>Cargando Todos los datos...</h4>", unsafe_allow_html=True)
     def ScrapComment(url):
+        driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         option = webdriver.FirefoxOptions()
         option.add_argument("--headless")
-        driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=option)
         driver.get(url)
         prev_h = 0
         while True:
