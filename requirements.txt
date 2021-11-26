@@ -18,3 +18,4 @@ streamlit
 requests
 streamlit_player
 urllib3
+selenium
