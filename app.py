@@ -7,6 +7,7 @@ from numpy.core.fromnumeric import size
 from pandas.core.frame import DataFrame
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from bs4 import BeautifulSoup
 import time
 import pandas as pd
@@ -360,9 +361,12 @@ if control == True:
 
     st.markdown("<h4 style='text-align: center; color: green;'>Cargando Todos los datos...</h4>", unsafe_allow_html=True)
     def ScrapComment(url):
-        driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
-        option = webdriver.FirefoxOptions()
+        option = webdriver.ChromeOptions()
+        option.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         option.add_argument("--headless")
+        option.add_argument("--no-sandbox")
+        option.add_argument("--disable--dev-sh-usage")
+        driver = webdriver.Chrome(executable_path= os.environ.get("CHROMEDRIVER_PATH"), chrome_options=option)
         driver.get(url)
         prev_h = 0
         while True:
