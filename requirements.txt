@@ -4,7 +4,6 @@ pandas
 selenium
 webdriver_manager
 Bs4
-warnings
 string
 sentiment_analysis_spanish
 wordcloud
