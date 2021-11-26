@@ -673,7 +673,10 @@ if __name__ == "__main__":
     
     if control == True:
         ScrapComment(url=url)
-        streamlitWebAPP(dataframe=DATA, positivo=POSITIVO, negativo=NEGATIVO, neutral=NEUTRAL)
+        try:
+            streamlitWebAPP(dataframe=DATA, positivo=POSITIVO, negativo=NEGATIVO, neutral=NEUTRAL)
+        except ValueError:
+            st.write('No existen comentarios para el análisis')
         
 ############### TIEMPO DE EJECUCIÓN TOTAL DEL PROGRAMA ######################
 
