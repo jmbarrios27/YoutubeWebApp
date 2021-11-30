@@ -1,5 +1,7 @@
 # LIBRERIAS DE YOUTUBE
 from datetime import date
+import nltk
+nltk.download()
 from sys import path
 from nltk import data
 from nltk.featstruct import retract_bindings
@@ -23,8 +25,6 @@ from nltk.corpus import stopwords
 from textblob import TextBlob
 import gensim
 import itertools,collections
-import nltk
-nltk.download()
 import base64
 import xlsxwriter
 from sklearn.feature_extraction.text import TfidfVectorizer,  CountVectorizer
