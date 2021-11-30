@@ -1,7 +1,6 @@
 # LIBRERIAS DE YOUTUBE
 from datetime import date
 import nltk
-nltk.download()
 from sys import path
 from nltk import data
 from nltk.featstruct import retract_bindings
