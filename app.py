@@ -513,7 +513,9 @@ if control == True:
 
     # Extrayendo datos segregados por sentimiento y transofrmandolas a variables de entorno.
     DATA, POSITIVO, NEUTRAL, NEGATIVO = ScrapComment(url=url)
-
+    
+    # Prueba de Streamlit
+    st.dataframe(DATA.head(15),10000,10000)
 
     def streamlitWebAPP(dataframe, positivo, negativo, neutral):
         st.write('')
