@@ -456,9 +456,9 @@ if control == True:
             dataframe['CARACTERES'] = dataframe['COMENTARIO'].apply(lambda x: len(x))
             dataframe['CARACTERES'] = dataframe['CARACTERES'].astype('int')
 
-            #dataframe['TEXTO_STOPWORD'] = dataframe['COMENTARIO']
-            #dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].apply(removeStopwords)
-            #dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].str.strip()
+            dataframe['TEXTO_STOPWORD'] = dataframe['COMENTARIO']
+            dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].apply(removeStopwords)
+            dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].str.strip()
         except AttributeError:
             st.write('EL Post no Cuenta con comentarios, por favor intentar con otro.')
 
@@ -515,7 +515,7 @@ if control == True:
     DATA, POSITIVO, NEUTRAL, NEGATIVO = ScrapComment(url=url)
     
     # Prueba de Streamlit
-    st.dataframe(DATA.head(15),10000,10000)
+    #st.dataframe(DATA.head(15),10000,10000)
 
     def streamlitWebAPP(dataframe, positivo, negativo, neutral):
         st.write('')
