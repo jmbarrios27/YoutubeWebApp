@@ -456,9 +456,9 @@ if control == True:
             dataframe['CARACTERES'] = dataframe['COMENTARIO'].apply(lambda x: len(x))
             dataframe['CARACTERES'] = dataframe['CARACTERES'].astype('int')
 
-            dataframe['TEXTO_STOPWORD'] = dataframe['COMENTARIO']
-            dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].apply(removeStopwords)
-            dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].str.strip()
+            #dataframe['TEXTO_STOPWORD'] = dataframe['COMENTARIO']
+            #dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].apply(removeStopwords)
+            #dataframe['TEXTO_STOPWORD'] = dataframe['TEXTO_STOPWORD'].str.strip()
         except AttributeError:
             st.write('EL Post no Cuenta con comentarios, por favor intentar con otro.')
 
@@ -505,7 +505,7 @@ if control == True:
         except AttributeError:
             st.write('EL Post no Cuenta con comentarios, por favor intentar con otro.')
 
-        dataframe.to_excel('D:\\ComentarioYoutube\\{0}'.format('comentarios_youtube' +'_'+clean_url +'_'+datestring + '.xlsx'), index=False)
+        #dataframe.to_excel('D:\\ComentarioYoutube\\{0}'.format('comentarios_youtube' +'_'+clean_url +'_'+datestring + '.xlsx'), index=False)
         file_size = os.stat('D:\\ComentarioYoutube\\{0}'.format('comentarios_youtube' +'_'+clean_url +'_'+datestring + '.xlsx'))
         print("Size of file :", file_size.st_size, "bytes")
         return dataframe, positivo, neutral, negativo
