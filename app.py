@@ -80,10 +80,10 @@ def limpieza_fecha_comentario(text):
 
 
 # funcion para eliminar spanish stopwords
-def removeStopwords( texto):
-    blob = TextBlob(texto).words
-    outputlist = [word for word in blob if word not in stopwords.words('spanish')]
-    return(' '.join(word for word in outputlist))
+def removeStopwords(texto):
+    STOPWORDS = set(stopwords.words('spanish'))
+    text =  ' '.join([word for word in texto.split() if word not in STOPWORDS]) # delete stopwords from text
+    return text
 
 
 # Limpieza de textos
