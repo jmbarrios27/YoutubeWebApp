@@ -147,9 +147,9 @@ def spanish_sentiment(data):
 
 # Extrayendo sentimiento
 def sentimiento(Polaridad):
-    if Polaridad <= 0.2:
+    if Polaridad <= 0.1:
         return 'NEGATIVO'
-    elif Polaridad >= 0.21 and Polaridad <=0.29:
+    elif Polaridad >= 0.1 and Polaridad <=0.4:
         return 'NEUTRAL'
     else:
         return 'POSITIVO'
