@@ -1,0 +1,6 @@
+nltk
+stopwords
+tokenize
+retract_bindings
+punkt
+wordnet
