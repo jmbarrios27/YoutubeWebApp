@@ -1,4 +1,3 @@
 stopwords
-retract_bindings
 punkt
 wordnet
